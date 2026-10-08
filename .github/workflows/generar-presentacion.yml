@@ -1,12 +1,9 @@
 name: Generar presentación corregida
 
+# 2026-10-08: se quitó push (minutos de Actions agotados).
+# No es un test: genera el pptx y lo vuelve a subir. Queda workflow_dispatch.
+# No se copió a Cloud Build: el job hace git push y gastaría.
 on:
-  push:
-    branches:
-      - entrega-final-v4
-    paths:
-      - generar_presentacion.py
-      - .github/workflows/generar-presentacion.yml
   workflow_dispatch:
 
 permissions:
